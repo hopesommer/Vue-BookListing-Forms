@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>{{title}}</h1>
+    <ul>
+      <book-item v-for='book in books' :key='book.id' :book='book'></book-item>
+    </ul>
     <br><hr>
     <hr><h2>Filtered Books By Ownership</h2>
     <select v-model="holding">
